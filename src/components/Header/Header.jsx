@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom';
+
 import { HeaderWrap, Logo, Navigation, StyledNavLink } from './Header.styled';
 
 const Header = () => {
   return (
     <>
       <HeaderWrap>
-        <Logo>Car Rent</Logo>
+        <Link to="/">
+          <Logo>Car Rent</Logo>
+        </Link>
         <Navigation>
           <StyledNavLink to="/">Home</StyledNavLink>
           <StyledNavLink to='/catalog'>Catalog</StyledNavLink>

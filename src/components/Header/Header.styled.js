@@ -15,17 +15,15 @@ export const HeaderWrap = styled.header`
 export const Logo = styled.h2`
   text-transform: uppercase;
   font-family: 'Manrope', sans-serif;
-  color: #0B44CD; 
+  color: #0B44CD;
 `;
 
 export const Navigation = styled.nav`
   display: flex;
-  // justify-content: space-between;
   font-family: 'Manrope', sans-serif;
   gap: 40px;
   padding: 28px;
   font-size: 26px;
-  // font-weight: 700;
 `;
 
 export const StyledNavLink = styled(NavLink)`
