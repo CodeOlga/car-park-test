@@ -9,6 +9,7 @@ export const CardWrap = styled.div`
 `;
 
 export const ImageWrap = styled.div`
+  position: relative;
   width: 274px; 
   height: 274px;
 `;
@@ -17,6 +18,18 @@ export const Image = styled.img`
   width: 100%;
   height: 268px;
   border-radius: 14px;
+`;
+
+export const FavoriteButton = styled.button`
+  position: absolute;
+  padding: 0;
+  border: none;
+  top: 14px;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+  background: none;
+  cursor: pointer;
 `;
 
 export const FirstLine = styled.div`
