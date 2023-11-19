@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/car-park-test/static/css/main.9fa9b68c.css",
-    "main.js": "/car-park-test/static/js/main.339cab34.js",
+    "main.css": "/car-park-test/static/css/main.903b0608.css",
+    "main.js": "/car-park-test/static/js/main.951bdd27.js",
     "static/js/898.6539fba4.chunk.js": "/car-park-test/static/js/898.6539fba4.chunk.js",
-    "static/js/397.521bf9a5.chunk.js": "/car-park-test/static/js/397.521bf9a5.chunk.js",
+    "static/js/929.addf9e7f.chunk.js": "/car-park-test/static/js/929.addf9e7f.chunk.js",
     "static/js/733.915b4d96.chunk.js": "/car-park-test/static/js/733.915b4d96.chunk.js",
-    "static/js/462.a01ead7d.chunk.js": "/car-park-test/static/js/462.a01ead7d.chunk.js",
+    "static/js/180.9c8ba7f9.chunk.js": "/car-park-test/static/js/180.9c8ba7f9.chunk.js",
     "static/media/mainPicture.jpg": "/car-park-test/static/media/mainPicture.57eefd5ade13c9cf655c.jpg",
     "index.html": "/car-park-test/index.html",
-    "main.9fa9b68c.css.map": "/car-park-test/static/css/main.9fa9b68c.css.map",
-    "main.339cab34.js.map": "/car-park-test/static/js/main.339cab34.js.map",
+    "main.903b0608.css.map": "/car-park-test/static/css/main.903b0608.css.map",
+    "main.951bdd27.js.map": "/car-park-test/static/js/main.951bdd27.js.map",
     "898.6539fba4.chunk.js.map": "/car-park-test/static/js/898.6539fba4.chunk.js.map",
-    "397.521bf9a5.chunk.js.map": "/car-park-test/static/js/397.521bf9a5.chunk.js.map",
+    "929.addf9e7f.chunk.js.map": "/car-park-test/static/js/929.addf9e7f.chunk.js.map",
     "733.915b4d96.chunk.js.map": "/car-park-test/static/js/733.915b4d96.chunk.js.map",
-    "462.a01ead7d.chunk.js.map": "/car-park-test/static/js/462.a01ead7d.chunk.js.map"
+    "180.9c8ba7f9.chunk.js.map": "/car-park-test/static/js/180.9c8ba7f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fa9b68c.css",
-    "static/js/main.339cab34.js"
+    "static/css/main.903b0608.css",
+    "static/js/main.951bdd27.js"
   ]
 }
