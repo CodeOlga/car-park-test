@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchCars } from './operations';
 
 const initialState = {
-  cars: [],
+  items: [],
   isLoading: false,
   error: null,
 };
@@ -18,7 +18,7 @@ const carsSlice = createSlice({
       })
       .addCase(fetchCars.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.cars = action.payload;
+        state.items = action.payload;
         state.error = null;
       })
       .addCase(fetchCars.rejected, (state, action) => {

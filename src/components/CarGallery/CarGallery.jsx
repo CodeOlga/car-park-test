@@ -1,31 +1,33 @@
 import CarCard from '../CarCard/CarCard';
+import { MainContainer, GalleryWrap } from './CarGallery.styled'
 
-const CarsGallery = ({ cars }) => {
+const CarGallery = ({ cars }) => {
   return (
-    <>
-      <ul>
+    <MainContainer>
+      <GalleryWrap>
         {cars?.map(({ id, make, model, year, rentalPrice, address, rentalCompany, type, accessories, mileage, img }) => (
 
           <li key={id}>
-            <CarCard key={id}
-              id={id}
-              make={make}
-              model={model}
-              year={year}
-              rentalPrice={rentalPrice}
-              address={address}
-              rentalCompany={rentalCompany}
-              type={type}
-              accessories={accessories}
-              mileage={mileage}
-              img={img} />
+            <CarCard carDetails={{
+              id,
+              img,
+              make,
+              model,
+              year,
+              rentalPrice,
+              address,
+              rentalCompany,
+              type,
+              accessories,
+              mileage,
+            }} />
           </li>
         ))}
-      </ul>
-    </>
+      </GalleryWrap>
+    </MainContainer>
   );
 }
 
-export default CarsGallery;
+export default CarGallery;
 
 

@@ -1,31 +1,40 @@
-import { Image } from './CarCard.styled';
+import { CardWrap, ImageWrap, Image, List, Item, FirstLine, Title, Span, SecondLine, ThirdLine, Button } from './CarCard.styled';
 
 const CarCard = ({ carDetails }) => {
-  const { id, make, model, year, rentalPrice, address, rentalCompany, type, accessories, mileage, img } = carDetails;
+  if (!carDetails) {
+    return null;
+  }
+  const { id, img, make, model, year, rentalPrice, address, rentalCompany, type, accessories, mileage } = carDetails;
 
   return (
-    carDetails && (
-      <>
-        <div>
-          <Image src={img} width="274px" alt="car" loading="lazy" />
-        </div>
+    <CardWrap>
+      <ImageWrap>
+        <Image src={img} width="274px" alt="car" loading="lazy" />
+      </ImageWrap>
 
-        <ul>
-          <li>{make}</li>
-          <li>{model}</li>
-          <li>{year}</li>
-          <li>{rentalPrice}</li>
-          <li>{address}</li>
-          <li>Ukraine</li>
-          <li>{rentalCompany}</li>
-          <li>{mileage}</li>
-          <li>{type}</li>
-          <li>{id}</li>
-          <li>{accessories[0]}</li>
-        </ul>
-      </>
-    )
-  );
+      <List>
+        <FirstLine>
+          <Title>
+            {make} <Span>{model}</Span>, {year}
+          </Title>
+          <Item>{rentalPrice}</Item>
+        </FirstLine>
+
+        <SecondLine>
+          <Item>{address.split(",")[1]}</Item>
+          <Item>{address.split(",")[2]}</Item>
+          <Item>{rentalCompany}</Item>
+        </SecondLine>
+        <ThirdLine>
+          <Item>{mileage}</Item>
+          <Item>{type}</Item>
+          <Item>{id}</Item>
+          <Item>{accessories[0]}</Item>
+        </ThirdLine>
+      </List>
+      <Button type='button'>Learn more</Button>
+    </CardWrap >
+  )
 }
 
 export default CarCard;
