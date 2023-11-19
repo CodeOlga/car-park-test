@@ -5,7 +5,10 @@ export const Button = styled.button`
   color: #3470FF;
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px; 
+  line-height: 24px;
+  // text-align: center; 
   text-decoration-line: underline;
-  margin-top: 100px;
+  margin: 100px auto 150px; 
+  display: block;
+  background-color: #fff;
 `;

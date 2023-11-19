@@ -27,7 +27,7 @@ export const FirstLine = styled.div`
   font-weight: 500;
   line-height: 24px; 
   margin-top: 14px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 `;
 
 export const Title = styled.h2`
@@ -40,22 +40,33 @@ export const Span = styled.span`
   color:  #3470FF;
 `;
 
+export const SvgSpan = styled.span`
+  display: inline-block;
+  width: 0px;
+  height: 16px;
+  stroke-width: 1px;
+  stroke: rgba(18, 20, 23, 0.10);
+  margin: 0 6px;
+`;
+
 export const SecondLine = styled.div`
   display: flex;
-  justify-content: space-between;
+  text-align: left;
   color: rgba(18, 20, 23, 0.50);
   font-size: 12px;
   font-weight: 400;
-  line-height: 18px; 
+  line-height: 18px;
+  margin-bottom: 4px; 
 `;
 
 export const ThirdLine = styled.div`
   display: flex;
-  justify-content: space-between;
+  text-align: left;
   color: rgba(18, 20, 23, 0.50);
   font-size: 12px;
   font-weight: 400;
-  line-height: 18px; 
+  line-height: 18px;
+  margin-bottom: 28px; 
 `;
 
 export const List = styled.div`
@@ -63,6 +74,11 @@ export const List = styled.div`
 `;
 
 export const Item = styled.p`
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export const Button = styled.button`

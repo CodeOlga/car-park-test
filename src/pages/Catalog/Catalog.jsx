@@ -22,15 +22,17 @@ const Catalog = () => {
   const handleLoadMore = () => {
     const nextPage = currentPage + 1;
     setCurrentPage(nextPage);
-    dispatch(fetchCarsMore({ page: nextPage, limit: 12 }));
+    dispatch(fetchCarsMore({ page: nextPage, limit: 12, append: true }));
   };
+
+  const isEndOfCollection = cars.length % 12 !== 0;
 
   return (
     <>
       <SearchForm />
       <CarGallery cars={cars} />
       {isLoading && !error && <p>Loading...</p>}
-      {!isLoading && (
+      {!isLoading && !isEndOfCollection && (
         <Button onClick={handleLoadMore}>Load more</Button>
       )}
     </>
