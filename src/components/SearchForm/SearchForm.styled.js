@@ -31,18 +31,18 @@ export const CustomInputLeft = styled.input`
   font-weight: 500;
   margin-left: 0px;
 
-    &::placeholder {
-      opacity: 1;
-    }
-
-    &:hover {
-      border-color: #CCCCCC;
+  &::placeholder {
+    opacity: 1;
   }
 
-    &:focus {
-      border-color: #3470FF;
-      outline: none;
-    }
+  &:hover {
+    border-color: #CCCCCC;
+  }
+
+  &:focus {
+    border-color: #3470FF;
+    outline: none;
+  }
 `;
 
 export const CustomInputRight = styled.input`
