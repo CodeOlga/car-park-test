@@ -4,14 +4,15 @@ import noResultsPicture from '../../assets/noResultsFound.png';
 export const FavoritesWrap = styled.div`
   margin-top: 100px;
   margin-left: 115px;
+  position: relative;
 `;
 
 export const NoResultsImage = styled.img`
   position: absolute;
   top: 100px;
   left: 0px;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   background-image: url(${noResultsPicture});
   background-position: center;
   background-repeat: no-repeat;
