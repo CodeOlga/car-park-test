@@ -3,7 +3,6 @@ import noResultsPicture from '../../assets/noResultsFound.png';
 
 export const FavoritesWrap = styled.div`
   margin-top: 100px;
-  margin-left: 115px;
   position: relative;
 `;
 
