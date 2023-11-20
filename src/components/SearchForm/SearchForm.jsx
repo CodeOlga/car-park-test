@@ -74,7 +74,6 @@ const SearchForm = ({ onSearch }) => {
       <div>
         <Label htmlFor="carBrand">Car Brand</Label>
         <Select
-          name='login'
           defaultValue={selectedCarBrand}
           options={options}
           onChange={setSelectedCarBrand}
