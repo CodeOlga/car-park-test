@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux/es/hooks/useSelector";
+
 import { selectFavorites } from '../../redux/selectors';
 import { addFavorite, deleteFavorite } from '../../redux/favoritesSlice';
 import { CardWrap, ImageWrap, Image, FavoriteButton, List, Item, FirstLine, Title, Span, SvgSpan, SecondLine, ThirdLine, Button } from './CarCard.styled';

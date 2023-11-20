@@ -13,24 +13,6 @@ const SearchForm = ({ onSearch }) => {
   const [selectedCarBrand, setSelectedCarBrand] = useState('');
   const [selectedPricePerHour, setSelectedPricePerHour] = useState('');
   const [mileageRange, setMileageRange] = useState({ from: '', to: '' });
-  // const dispatch = useDispatch();
-  // const login = useSelector(state => state.login.value)
-
-  // const handleCarBrandChange = (selectedOption) => {
-  //   setSelectedCarBrand(selectedOption.value);
-  // };
-
-  // const handlePricePerHourChange = (e) => {
-  //   setSelectedPricePerHour(e.target.value);
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
-  //   // console.log(form.elements.login.value)
-  //   dispatch(logIn(form.elements.login.value))
-  //   form.reset()
-  // }
 
   const handleMileageChange = (part, value) => {
     setMileageRange((prevRange) => ({ ...prevRange, [part]: value }));
@@ -88,7 +70,6 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    // <FormContainer onSubmit={handleSubmit}>
     <FormContainer>
       <div>
         <Label htmlFor="carBrand">Car Brand</Label>

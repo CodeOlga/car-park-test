@@ -12,7 +12,6 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
   color: #8A8A89;
-  font-family: Manrope;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -29,7 +28,6 @@ export const CustomInputLeft = styled.input`
   background-color: #F7F7FB;
   line-height: 20px; 
   color: #121417;
-  font-family: 'Manrope';
   font-weight: 500;
   margin-left: 0px;
 
@@ -59,31 +57,31 @@ export const CustomInputRight = styled.input`
   margin-right: 0px;
   line-height: 20px; 
 
-    &::placeholder {
-      opacity: 1;
-    }
+  &::placeholder {
+    opacity: 1;
+  }
 
-    &:hover {
-      border-color: #CCCCCC;
-    }
+  &:hover {
+    border-color: #CCCCCC;
+  }
 
-    &:focus {
-      border-color: #3470FF;
-      outline: none;
+  &:focus {
+    border-color: #3470FF;
+    outline: none;
   }
 `;
 
 export const StyledButton = styled.button`
-color: #FFF;
-font-size: 14px;
-font-weight: 600;
-line-height: 20px; 
-border-radius: 12px;
-background-color: #3470FF;
-width: 136px;
-height: 48px;
-padding: 14px 44px;
-transition: background-color 0.3s ease;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px; 
+  border-radius: 12px;
+  background-color: #3470FF;
+  width: 136px;
+  height: 48px;
+  padding: 14px 44px;
+  transition: background-color 0.3s ease;
 
   &:hover,
   &:focus {

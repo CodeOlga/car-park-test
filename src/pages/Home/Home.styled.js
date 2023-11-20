@@ -43,7 +43,6 @@ export const Button = styled.button`
   border-radius: 12px;
   color: #ffffff;
   background-color: #3470FF;
-  font-family: Manrope;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
