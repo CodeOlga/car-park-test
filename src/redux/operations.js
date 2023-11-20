@@ -40,3 +40,44 @@ export const fetchCarsMore = createAsyncThunk(
   }
 );
 
+// //=============
+// export const fetchFavorites = createAsyncThunk(
+//   'favorites/fetchFavorites',
+//   async (_, thunkAPI) => {
+//     try {
+//       const url = new URL('/favorites', axios.defaults.baseURL);
+//       const { data } = await axios.get(url.toString());
+//       return data;
+//     } catch (e) {
+//       return thunkAPI.rejectWithValue(e.message);
+//     }
+//   }
+// );
+// // Предположим, что у вас также есть действие для добавления избранной машины
+// export const addFavorite = createAsyncThunk(
+//   'favorites/addFavorite',
+//   async (car, thunkAPI) => {
+//     try {
+//       const url = new URL('/favorites', axios.defaults.baseURL);
+//       const { data } = await axios.post(url.toString(), car);
+//       return data;
+//     } catch (e) {
+//       return thunkAPI.rejectWithValue(e.message);
+//     }
+//   }
+// );
+
+// // Предположим, что у вас также есть действие для удаления избранной машины
+// export const deleteFavorite = createAsyncThunk(
+//   'favorites/deleteFavorite',
+//   async (carId, thunkAPI) => {
+//     try {
+//       const url = new URL(`/favorites/${carId}`, axios.defaults.baseURL);
+//       const { data } = await axios.delete(url.toString());
+//       return data;
+//     } catch (e) {
+//       return thunkAPI.rejectWithValue(e.message);
+//     }
+//   }
+// );
+

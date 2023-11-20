@@ -9,7 +9,7 @@ const Home = () => {
       <Title>Welcome to <Span>Car Rent</Span></Title>
       <Text>your trusted car rental solution in Ukraine</Text>
       <Link to="/catalog">
-        <Button type='button'>Rental car</Button>
+        <Button type='button'>Let's go</Button>
       </Link>
     </HomeWrap>
   )
