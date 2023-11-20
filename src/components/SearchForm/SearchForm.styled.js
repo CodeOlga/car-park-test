@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import Select from 'react-select';
 
 export const FormContainer = styled.form`
   display: flex;
@@ -56,7 +55,6 @@ export const CustomInputRight = styled.input`
   border: 1px solid transparent;
   background-color: #F7F7FB;
   color: #121417;
-  font-family: 'Manrope';
   font-weight: 500;
   margin-right: 0px;
   line-height: 20px; 
@@ -76,8 +74,7 @@ export const CustomInputRight = styled.input`
 `;
 
 export const StyledButton = styled.button`
-color: var(--White, #FFF);
-font-family: Manrope;
+color: #FFF;
 font-size: 14px;
 font-weight: 600;
 line-height: 20px; 
@@ -86,7 +83,6 @@ background-color: #3470FF;
 width: 136px;
 height: 48px;
 padding: 14px 44px;
-// flex-shrink: 0;
 transition: background-color 0.3s ease;
 
   &:hover,

@@ -5,7 +5,6 @@ export const CardWrap = styled.div`
   height: 426px;
   display: flex;
   flex-direction: column;
-  font-family: Manrope; 
 `;
 
 export const ImageWrap = styled.div`

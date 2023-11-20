@@ -66,24 +66,24 @@ const SearchForm = ({ onSearch }) => {
       return {
         ...styles,
         color: isDisabled ? '#fff' : isSelected ? '#121417' : 'rgba(18, 20, 23, 0.20)',
-        fontSize: isDisabled ? '16px' : '18px', // Размер для опции в выпадающем меню
+        fontSize: isDisabled ? '16px' : '18px',
       };
     },
     singleValue: (styles) => {
       return {
         ...styles,
-        color: '#121417', // Черный цвет для текста Enter the text
-        fontSize: '18px', // Больший размер для текста Enter the text
+        color: '#121417',
+        fontSize: '18px',
       };
     },
     placeholder: (styles) => ({
       ...styles,
-      color: '#121417', // Черный цвет для текста Enter the text (когда ничего не выбрано)
+      color: '#121417',
       fontSize: '18px',
     }),
     // menu: (provided) => ({
     //   ...provided,
-    //   width: '100%', // фиксированная ширина выпадающего списка
+    //   width: '100%', // фіксована ширина выпадаючого списк
     // }),
   };
 
@@ -94,7 +94,6 @@ const SearchForm = ({ onSearch }) => {
         <Label htmlFor="carBrand">Car Brand</Label>
         <Select
           name='login'
-          // value={selectedCarBrand}
           defaultValue={selectedCarBrand}
           options={options}
           onChange={setSelectedCarBrand}

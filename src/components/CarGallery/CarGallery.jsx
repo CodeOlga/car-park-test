@@ -5,8 +5,8 @@ const CarGallery = ({ cars }) => {
   return (
     <MainContainer>
       <GalleryWrap>
-        {cars?.map(({ id, make, model, year, rentalPrice, address, rentalCompany, type, accessories, mileage, img }) => (
 
+        {cars?.map(({ id, make, model, year, rentalPrice, address, rentalCompany, type, accessories, mileage, img }) => (
           <li key={id}>
             <CarCard carDetails={{
               id,
@@ -23,6 +23,7 @@ const CarGallery = ({ cars }) => {
             }} />
           </li>
         ))}
+
       </GalleryWrap>
     </MainContainer>
   );

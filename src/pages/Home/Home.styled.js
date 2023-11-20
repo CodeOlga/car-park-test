@@ -4,8 +4,6 @@ import mainPicture from '../../assets/mainPicture.jpg';
 export const HomeWrap = styled.div`
   margin-top: 100px;
   margin-left: 115px;
-  color: #ffffff;
-  font-family: 'Manrope', sans-serif;
 `;
 
 export const BackgroundImage = styled.img`
@@ -23,14 +21,12 @@ export const BackgroundImage = styled.img`
 
 export const Title = styled.h1`
   color: #ffffff;
-  font-family: 'Manrope', sans-serif;
 `;
 
 export const Text = styled.p`
   margin-top: 30px;
   color: #ffffff;
   font-size: 24px;
-  font-family: 'Manrope', sans-serif;
 `;
 
 export const Span = styled.span`
