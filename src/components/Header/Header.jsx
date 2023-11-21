@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <HeaderWrap>
         <Link to="/">
-          <Logo>Car Rent</Logo>
+          <Logo>Car Rental</Logo>
         </Link>
         <Navigation>
           <StyledNavLink to="/">Home</StyledNavLink>

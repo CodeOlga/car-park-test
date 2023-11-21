@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <HomeWrap>
       <BackgroundImage />
-      <Title>Welcome to <Span>Car Rent</Span></Title>
+      <Title>Welcome to <Span>Car Rental</Span></Title>
       <Text>your trusted car rental solution in Ukraine</Text>
       <Link to="/catalog">
         <Button type='button'>Let's go</Button>
