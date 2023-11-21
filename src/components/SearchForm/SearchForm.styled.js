@@ -8,6 +8,27 @@ export const FormContainer = styled.form`
   margin-top: 65px;
 `;
 
+// export const FormContainer = styled.form`
+//   display: flex;
+//   // align-items: flex-end;
+//   justify-content: center;
+//   flex-direction: column;
+//   gap: 18px;
+//   margin-top: 65px;
+
+//   @media screen and (min-width: 768px) {
+//     flex-direction: row;
+//     align-items: flex-end;
+//     //  gap: 18px;
+//   }
+// `;
+
+// export const BrandPriceWrap = styled.div`
+//   @media screen and (min-width: 768px) {
+//   }
+// `;
+
+
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
