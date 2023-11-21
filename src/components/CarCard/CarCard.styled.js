@@ -31,7 +31,7 @@ export const FavoriteButton = styled.button`
   cursor: pointer;
 `;
 
-export const FirstLine = styled.div`
+export const TitleLine = styled.div`
   display: flex;
   justify-content: space-between;
   color: #121417;
@@ -39,7 +39,7 @@ export const FirstLine = styled.div`
   font-weight: 500;
   line-height: 24px; 
   margin-top: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 `;
 
 export const Title = styled.h2`
@@ -52,16 +52,11 @@ export const Span = styled.span`
   color:  #3470FF;
 `;
 
-export const SvgSpan = styled.span`
-  display: inline-block;
-  width: 0px;
-  height: 16px;
-  stroke-width: 1px;
-  stroke: rgba(18, 20, 23, 0.10);
-  margin: 0 6px;
+export const InfoWrap = styled.div`
+  width: 274px;
 `;
 
-export const SecondLine = styled.div`
+export const InfoLine = styled.ul`
   display: flex;
   text-align: left;
   color: rgba(18, 20, 23, 0.50);
@@ -71,26 +66,22 @@ export const SecondLine = styled.div`
   margin-bottom: 4px; 
 `;
 
-export const ThirdLine = styled.div`
-  display: flex;
-  text-align: left;
-  color: rgba(18, 20, 23, 0.50);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  margin-bottom: 28px; 
-`;
-
-export const List = styled.div`
-  width: 274px;
-`;
-
-export const Item = styled.p`
+export const InfoItem = styled.li`
   display: flex;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  &:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: rgba(18, 20, 23, 0.1);
+    margin-left: 6px;
+    margin-right: 6px;
+  }
 `;
 
 export const Button = styled.button`
@@ -107,7 +98,7 @@ export const Button = styled.button`
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  margin-top: auto; 
+  margin-top: auto;
   transition: background-color 0.3s ease;
 
   &:hover,
