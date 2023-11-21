@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
+import getAge from '../../utils/getAge';
 import {
   Overlay,
   ModalStyled,
@@ -43,16 +44,6 @@ const Modal = ({ car, onClose }) => {
 
   const city = address.split(",")[1];
   const country = address.split(",")[2];
-
-  const getAge = (rentalConditions) => {
-    const result = {};
-    const ageCondition = rentalConditions.split("\n")[0];
-    const words = ageCondition.split(" ");
-    result.conditionText = words.slice(0, 2).join(" ");
-    result.minAge = words[words.length - 1];
-    return result;
-  };
-
   const ageCondition = getAge(rentalConditions);
 
   useEffect(() => {
