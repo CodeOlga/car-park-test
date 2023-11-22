@@ -20,10 +20,12 @@ export const ModalStyled = styled.div`
   padding: 40px;
   width: 380px;
   max-height: 820px;
+  margin-top: 20px;
 
   @media screen and (min-width: 760px) {
     width: 541px;
     max-height: 752px;
+    margin-top: 0;
   }
 `;
 
