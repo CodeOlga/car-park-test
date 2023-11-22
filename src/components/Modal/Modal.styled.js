@@ -18,8 +18,13 @@ export const ModalStyled = styled.div`
   border-radius: 14px;
   background-color: var(--white-cl);
   padding: 40px;
-  width: 541px;
-  max-height: 752px;
+  width: 380px;
+  max-height: 820px;
+
+  @media screen and (min-width: 760px) {
+    width: 541px;
+    max-height: 752px;
+  }
 `;
 
 export const CloseIcon = styled.div`
@@ -84,7 +89,11 @@ export const InfoItem = styled.li`
 export const Description = styled.p`
   line-height: 1.43;
   margin-top: 14px;
-  width: 461px;
+  width: 300px;
+
+  @media screen and (min-width: 760px) {
+    width: 461px;
+  }
 `;
 
 export const InfoTitle = styled.h3`
@@ -102,7 +111,11 @@ export const ConditionList = styled.ul`
   gap: 8px;
   font-size: 12px;
   letter-spacing: -0.24px;
-  width: 461px;
+  width: 300px;
+
+  @media screen and (min-width: 760px) {
+    width: 461px;
+  }
 `;
 
 export const ConditionItem = styled.li`
