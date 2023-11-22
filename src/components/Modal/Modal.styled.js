@@ -17,16 +17,15 @@ export const ModalStyled = styled.div`
 
   border-radius: 14px;
   background-color: var(--white-cl);
-  padding: 40px;
+  padding: 40px 20px;
   width: 380px;
-    max-height: 100vh;
-  // max-height: 840px;
-  // margin-top: 20px;
+  max-height: 100vh;
 
   @media screen and (min-width: 760px) {
     width: 541px;
     max-height: 752px;
     margin-top: 0;
+    padding: 40px;
   }
 `;
 
