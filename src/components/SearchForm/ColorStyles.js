@@ -1,5 +1,6 @@
-export const colorStyles = {
-    control: (styles) => {
+export const colorStyles = (width) => {
+  return {
+      control: (styles) => {
       return {
         ...styles,
         backgroundColor: '#F7F7FB',
@@ -10,8 +11,8 @@ export const colorStyles = {
         fontSize: '18px',
         fontWeight: '500',
         lineHeight: '20px',
-        padding: '5px 18px',
-        width: '100%',
+        padding: '5px 0',
+        width,
         cursor: 'pointer'
       };
     },
@@ -34,8 +35,12 @@ export const colorStyles = {
       color: '#121417',
       fontSize: '18px',
     }),
-    // menu: (provided) => ({
-    //   ...provided,
-    //   width: '100%', // фіксована ширина выпадаючого списк
-    // }),
+    menu: (provided) => ({    
+      ...provided,
+      borderRadius: '14px',
+      border: '1px solid rgba(18, 20, 23, 0.05)',
+      background:' #FFF',
+      boxShadow: '0px 4px 36px 0px rgba(0, 0, 0, 0.02)', 
+    }),
+    }
   };
