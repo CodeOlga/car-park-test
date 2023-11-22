@@ -24,7 +24,7 @@ export const BrandPriceWrap = styled.div`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  color: #8A8A89;
+  color: var(--label-text-cl);
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -36,8 +36,8 @@ const inputStyles = `
   padding: 13px 0 13px 18px;
   font-size: 18px;
   border: 1px solid transparent;
-  background-color: #F7F7FB;
-  color: #121417;
+  background-color: var(--input-bg-cl);
+  color: var(--dark-text-cl);
   font-weight: 500;
   line-height: 20px;
 
@@ -45,18 +45,18 @@ const inputStyles = `
     opacity: 1;
   }
   &:hover {
-    border-color: rgba(18, 20, 23, 0.20);
+    border-color: var(--backdrop-text-cl);
   }
   &:focus {
     outline: none;
-    border-color: #3470FF;
+    border: 2px solid var(--normal-state-bg-cl);
   }
 `;
 
 export const CustomInputLeft = styled.input`
   ${inputStyles}
   border-radius: 14px 0px 0px 14px;
-  border-right: 1px solid rgba(138, 138, 137, 0.20);
+  border-right: 1px solid var(--border-text-cl);
   margin-left: 0px;
 `;
 
@@ -67,12 +67,12 @@ export const CustomInputRight = styled.input`
 `;
 
 export const StyledButton = styled.button`
-  color: #FFF;
+  color: var(--white-cl);
   font-size: 14px;
   font-weight: 600;
   line-height: 20px; 
   border-radius: 12px;
-  background-color: #3470FF;
+  background-color: var(--normal-state-bg-cl);
   width: 136px;
   height: 48px;
   padding: 14px 44px;
@@ -81,7 +81,7 @@ export const StyledButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #0B44CD;
+    background-color: var(--pressed-state-bg-cl);
   }
 
   @media screen and (min-width: 880px) {

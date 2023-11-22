@@ -22,7 +22,7 @@ export const HeaderWrap = styled.header`
 
 export const Logo = styled.h2`
   text-transform: uppercase;
-  color: #0B44CD;
+  color: var(--pressed-state-bg-cl);
   font-size: 20px;
 
   @media screen and (min-width: 768px) {
@@ -51,12 +51,12 @@ export const Navigation = styled.nav`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  color: #121417;
+  color: var(--dark-text-cl);
   text-decoration: none;
   transition: transform 0.3s ease;
 
   &.active {
-    color: #0B44CD;
+    color: var(--pressed-state-bg-cl);
   }
 
   &:hover {

@@ -1,16 +1,40 @@
 @import-normalize; 
 @import 'modern-normalize/modern-normalize.css';
 
-body {
-  margin: 0;
-  font-family: Manrope, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* Font */
+  --main-font: Manrope, sans-serif;
+
+  /* Text colors */
+  --dark-text-cl: #121417;
+  --light-text-cl: rgba(18, 20, 23, 0.50);
+  --backdrop-text-cl: rgba(18, 20, 23, 0.20);
+  --stroke-text-cl: rgba(18, 20, 23, 0.10);
+  --backdrop-border-cl: rgba(18, 20, 23, 0.05);
+  --border-text-cl: rgba(138, 138, 137, 0.20);
+  --white-cl: #ffffff;
+  --condition-text-cl: #363535;
+  --label-text-cl: #8A8A89;
+
+  /* Background colors */
+  --input-bg-cl: #F7F7FB;
+  --normal-state-bg-cl: #3470FF;
+  --pressed-state-bg-cl: #0B44CD;
+  --modal-overlay-bg-cl: rgba(18, 20, 23, 0.50);
+  --condition-bg-cl: #F9F9F9;
 }
 
+/* Base styles */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,

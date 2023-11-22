@@ -2,8 +2,13 @@ import styled from 'styled-components';
 import mainPicture from '../../assets/mainPicture.jpg';
 
 export const HomeWrap = styled.div`
-  margin-top: 100px;
-  margin-left: 115px;
+  margin-top: 80px;
+  margin-left: 60px;
+
+  @media screen and (min-width: 880px) {
+    margin-top: 100px;
+    margin-left: 115px;
+  }
 `;
 
 export const BackgroundImage = styled.img`
@@ -20,17 +25,21 @@ export const BackgroundImage = styled.img`
 `;
 
 export const Title = styled.h1`
-  color: #ffffff;
+  color: var(--white-cl);
+  
+  @media screen and (max-width: 480px) {
+    width: 240px;
+  }
 `;
 
 export const Text = styled.p`
   margin-top: 30px;
-  color: #ffffff;
+  color: var(--white-cl);
   font-size: 24px;
 `;
 
 export const Span = styled.span`
-  color: #0B44CD;
+  color: var(--pressed-state-bg-cl);
 `;
 
 export const Button = styled.button`
@@ -41,8 +50,8 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  color: #ffffff;
-  background-color: #3470FF;
+  color: var(--white-cl);
+  background-color: var(--normal-state-bg-cl);
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -51,6 +60,6 @@ export const Button = styled.button`
 
   &:hover,
   &:active {
-    background-color: #0B44CD;
+    background-color: var(--pressed-state-bg-cl);
   }
 `;

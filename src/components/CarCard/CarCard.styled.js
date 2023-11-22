@@ -34,7 +34,7 @@ export const FavoriteButton = styled.button`
 export const TitleLine = styled.div`
   display: flex;
   justify-content: space-between;
-  color: #121417;
+  color: var(--dark-text-cl);
   font-size: 16px;
   font-weight: 500;
   line-height: 24px; 
@@ -45,11 +45,11 @@ export const TitleLine = styled.div`
 export const Title = styled.h2`
   font-weight: 500;
   font-size: 14px;
-  color: #121417;
+  color: var(--dark-text-cl);
 `;
 
 export const Span = styled.span`
-  color:  #3470FF;
+  color:  var(--normal-state-bg-cl);
 `;
 
 export const InfoWrap = styled.div`
@@ -59,7 +59,7 @@ export const InfoWrap = styled.div`
 export const InfoLine = styled.ul`
   display: flex;
   text-align: left;
-  color: rgba(18, 20, 23, 0.50);
+  color: var(--light-text-cl);
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -78,7 +78,7 @@ export const InfoItem = styled.li`
     display: inline-block;
     width: 1px;
     height: 16px;
-    background-color: rgba(18, 20, 23, 0.1);
+    background-color: var(--stroke-text-cl);
     margin-left: 6px;
     margin-right: 6px;
   }
@@ -93,8 +93,8 @@ export const Button = styled.button`
   align-items: center;
   flex-shrink: 0;
   border-radius: 12px;
-  background: #3470FF;
-  color:  #FFF;
+  background: var(--normal-state-bg-cl);
+  color:  var(--white-cl);
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -103,7 +103,7 @@ export const Button = styled.button`
 
   &:hover,
   &.active {
-    background-color: #0B44CD;
+    background-color: var(--pressed-state-bg-cl);
   }
 `;
 

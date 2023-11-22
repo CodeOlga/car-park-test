@@ -5,7 +5,7 @@ export const Overlay = styled.div`
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(18, 20, 23, 0.50);
+  background-color: var(--light-text-cl);
   backdrop-filter: blur(2px);
 `;
 
@@ -16,7 +16,7 @@ export const ModalStyled = styled.div`
   transform: translate(-50%, -50%);
 
   border-radius: 14px;
-  background-color: #ffffff;
+  background-color: var(--white-cl);
   padding: 40px;
   width: 541px;
   max-height: 752px;
@@ -52,11 +52,11 @@ export const Title = styled.h2`
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
-  color: #121417;
+  color: var(--dark-text-cl);
 `;
 
 export const Span = styled.span`
-  color: #3470ff;
+  color: var(--normal-state-bg-cl);
 `;
 
 export const InfoLine = styled.ul`
@@ -66,7 +66,7 @@ export const InfoLine = styled.ul`
 
 export const InfoItem = styled.li`
   font-size: 12px;
-  color: rgba(18, 20, 23, 0.5);
+  color: var(--light-text-cl);
   display: flex;
   align-items: center;
 
@@ -75,7 +75,7 @@ export const InfoItem = styled.li`
     display: inline-block;
     width: 1px;
     height: 16px;
-    background-color: rgba(18, 20, 23, 0.1);
+    background-color: var(--stroke-text-cl);
     margin-left: 6px;
     margin-right: 6px;
   }
@@ -91,7 +91,7 @@ export const InfoTitle = styled.h3`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.43;
-  color: #121417;
+  color: var(--dark-text-cl);
   margin-top: 24px;
   margin-bottom: 8px;
 `;
@@ -107,13 +107,13 @@ export const ConditionList = styled.ul`
 
 export const ConditionItem = styled.li`
   border-radius: 35px;
-  color: #363535;
-  background-color: #f9f9f9;
+  color: var(--condition-text-cl);
+  background-color: var(--condition-bg-cl);
   padding: 7px 14px;
 `;
 
 export const SpanCondition = styled.span`
-  color: #3470ff;
+  color: var(--normal-state-bg-cl);
   font-weight: 600;
 `;
 
@@ -125,8 +125,8 @@ export const Button = styled.a`
   align-items: center;
 
   border-radius: 12px;
-  background-color: #3470ff;
-  color: #ffffff;
+  background-color: var(--normal-state-bg-cl);
+  color: var(--white-cl);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.43;
@@ -134,6 +134,6 @@ export const Button = styled.a`
 
   &:hover,
   &:focus {
-    background-color: #0b44cd;
+    background-color: var(--pressed-state-bg-cl);
   }
 `;
