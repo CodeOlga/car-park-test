@@ -15,6 +15,7 @@ export const colorStyles = (width) => {
         padding: '5px 0',
         width,
         cursor: 'pointer',
+        marginTop: '8px'
       };
     },
     option: (provided, { isDisabled, isSelected }) => {

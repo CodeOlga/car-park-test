@@ -2,7 +2,8 @@ import { useState } from 'react';
 import Select from 'react-select';
 
 import carBrandOptions from '../../data/makes.json';
-import { FormContainer, BrandPriceWrap, Label, CustomInputRight, CustomInputLeft, StyledButton } from './SearchForm.styled';
+import formatNumberWithCommas from '../../utils/formatNumberWithCommas';
+import { FormContainer, BrandPriceWrap, InputMileageWrap, Label, InputMileageText, CustomInputRight, CustomInputLeft, StyledButton } from './SearchForm.styled';
 import { colorStyles } from './ColorStyles';
 
 const options = carBrandOptions.map((brand) => ({
@@ -32,18 +33,18 @@ const SearchForm = ({ onSearch }) => {
     <FormContainer>
 
       <BrandPriceWrap>
-        <div>
-          <Label htmlFor="carBrand">Car Brand</Label>
+        <Label>
+          Car Brand
           <Select
             defaultValue={selectedCarBrand}
             options={options}
             onChange={setSelectedCarBrand}
             styles={colorStyles(224)}
             placeholder="Enter the text" />
-        </div>
+        </Label>
 
-        <div>
-          <Label htmlFor="pricePerHour">Price/1 hour</Label>
+        <Label>
+          Price/1 hour
           <Select
             defaultValue={selectedPricePerHour}
             options={priceOptions.map((price) => ({ value: price, label: `$${price}` }))}
@@ -51,26 +52,32 @@ const SearchForm = ({ onSearch }) => {
             styles={colorStyles(125)}
             placeholder="To $"
           />
-        </div>
+        </Label>
       </BrandPriceWrap>
 
-      <div>
-        <Label htmlFor="mileage">Car Mileage</Label>
-        <div>
+      <InputMileageWrap>
+        <Label>
+          Сar mileage / km
+          <InputMileageText>From</InputMileageText>
           <CustomInputLeft
+            required
             type="text"
-            placeholder="From"
-            value={mileageRange.from}
+            value={formatNumberWithCommas(mileageRange.from)}
             onChange={(e) => handleMileageChange('from', e.target.value)}
           />
+        </Label>
+
+        <Label style={{ color: "white" }}>
+          Сar mileage / km
+          <InputMileageText>To</InputMileageText>
           <CustomInputRight
+            required
             type="text"
-            placeholder="To"
-            value={mileageRange.to}
+            value={formatNumberWithCommas(mileageRange.to)}
             onChange={(e) => handleMileageChange('to', e.target.value)}
           />
-        </div>
-      </div>
+        </Label>
+      </InputMileageWrap>
 
       <StyledButton type="submit" onClick={handleSearch}>
         Search
@@ -81,6 +88,8 @@ const SearchForm = ({ onSearch }) => {
 };
 
 export default SearchForm;
+
+
 
 
 

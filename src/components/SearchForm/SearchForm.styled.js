@@ -20,6 +20,9 @@ export const BrandPriceWrap = styled.div`
   gap: 18px;
 `;
 
+export const InputMileageWrap = styled.div`
+  display: flex;
+`;
 
 export const Label = styled.label`
   display: flex;
@@ -28,28 +31,44 @@ export const Label = styled.label`
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
-  margin-bottom: 8px; 
+  position: relative;
+`;
+
+export const InputMileageText = styled.p`
+  position: absolute;
+  top: 40px;
+  left: 22px;
+  color: var(--dark-text-cl);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.11;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const inputStyles = `
-  width: 140px;
-  padding: 13px 0 13px 18px;
+  width: 160px;
+  padding: 13px 0 13px 88px;
   font-size: 18px;
   border: 1px solid transparent;
   background-color: var(--input-bg-cl);
   color: var(--dark-text-cl);
   font-weight: 500;
   line-height: 20px;
+  margin-top: 8px;
 
   &::placeholder {
     opacity: 1;
   }
+  
   &:hover {
     border-color: var(--backdrop-text-cl);
   }
   &:focus {
     outline: none;
-    border: 2px solid var(--normal-state-bg-cl);
+    border-color: var(--normal-state-bg-cl);
   }
 `;
 
@@ -88,6 +107,11 @@ export const StyledButton = styled.button`
     margin-top: 0;
   }
 `;
+
+
+
+
+
 
 
 
