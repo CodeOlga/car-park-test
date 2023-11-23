@@ -39,13 +39,9 @@ export const InputMileageText = styled.p`
   top: 40px;
   left: 22px;
   color: var(--dark-text-cl);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.11;
-
-  @media screen and (min-width: 768px) {
-    font-size: 18px;
-  }
 `;
 
 const inputStyles = `
@@ -62,7 +58,7 @@ const inputStyles = `
   &::placeholder {
     opacity: 1;
   }
-  
+
   &:hover {
     border-color: var(--backdrop-text-cl);
   }
