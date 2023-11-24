@@ -60,7 +60,7 @@ const SearchForm = ({ onSearch }) => {
           Сar mileage / km
           <InputMileageText>From</InputMileageText>
           <CustomInputLeft
-            required
+            required // поле обов'язкове для заповнення 
             type="text"
             value={formatNumberWithCommas(mileageRange.from)}
             onChange={(e) => handleMileageChange('from', e.target.value)}

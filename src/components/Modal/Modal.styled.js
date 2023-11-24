@@ -133,7 +133,7 @@ export const SpanCondition = styled.span`
   font-weight: 600;
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   width: 168px;
   height: 44px;
   display: flex;
