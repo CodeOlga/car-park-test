@@ -127,7 +127,8 @@ const Modal = ({ car, onClose }) => {
 
         </InfoWrap>
 
-        <Button href="#" onClick={() => window.location.href = 'tel:380730000000'}>Rental car</Button>
+        <Button onClick={() => window.location.href = 'tel:380730000000'}>Rental car</Button>
+        {/* <Button href="#" onClick={() => window.location.href = 'tel:380730000000'}>Rental car</Button> */}
         {/* <Button href="tel:+380730000000">Rental car</Button> */}
       </ModalStyled>
     </Overlay>,
