@@ -19,7 +19,8 @@ export const ModalStyled = styled.div`
   background-color: var(--white-cl);
   padding: 40px 20px;
   width: 380px;
-  // max-height: 95vh;
+  max-height: 100vh;
+  overflow: auto;
 
   @media screen and (min-width: 760px) {
     width: 541px;
