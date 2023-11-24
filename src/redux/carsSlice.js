@@ -11,6 +11,7 @@ const handlePending = (state) => {
   state.isLoading = true;
   state.error = null;
 };
+
 const handleRejected = (state, { payload }) => {
   state.isLoading = false;
   state.error = payload;
@@ -19,20 +20,21 @@ const handleRejected = (state, { payload }) => {
 const carsSlice = createSlice({
   name: 'cars',
   initialState,
-    extraReducers: {
-    [fetchCars.pending]: handlePending,
-    [fetchCars.fulfilled]: (state, { payload }) => {
-      state.isLoading = false;
-      state.items =
-      state.items[0]?.id === payload[0]?.id
-        ? payload
-        : [...state.items, ...payload];
-    },
-    [fetchCars.rejected]: handleRejected,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchCars.pending, handlePending)
+      .addCase(fetchCars.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.items =
+          state.items[0]?.id === payload[0]?.id
+            ? payload
+            : [...state.items, ...payload];
+      })
+      .addCase(fetchCars.rejected, handleRejected);
   },
 });
 
 export const carsReducer = carsSlice.reducer;
-
 
 
