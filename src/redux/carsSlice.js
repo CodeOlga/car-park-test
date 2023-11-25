@@ -9,7 +9,15 @@ const initialState = {
 
 const handlePending = (state) => {
   state.isLoading = true;
-  state.error = null;
+};
+
+const handleFulfilled = (state, { payload }) => {
+      state.isLoading = false;
+      state.error = null;
+      state.items =
+        state.items[0]?.id === payload[0]?.id
+        ? payload
+        : [...state.items, ...payload];
 };
 
 const handleRejected = (state, { payload }) => {
@@ -17,20 +25,17 @@ const handleRejected = (state, { payload }) => {
   state.error = payload;
 };
 
+// Slice - create actions та create reducers разом взяті
 const carsSlice = createSlice({
   name: 'cars',
   initialState,
   reducers: {},
+  // в extraReducers опрацьовуємо actions, які створює createAsyncThunk
+  // fetchCars тут - це назва відповідного thunk
   extraReducers: (builder) => {
     builder
       .addCase(fetchCars.pending, handlePending)
-      .addCase(fetchCars.fulfilled, (state, { payload }) => {
-        state.isLoading = false;
-        state.items =
-          state.items[0]?.id === payload[0]?.id
-            ? payload
-            : [...state.items, ...payload];
-      })
+      .addCase(fetchCars.fulfilled,  handleFulfilled)
       .addCase(fetchCars.rejected, handleRejected);
   },
 });
