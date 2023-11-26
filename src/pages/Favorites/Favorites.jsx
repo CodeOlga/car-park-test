@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 
-import CarGallery from '../../components/CarGallery/CarGallery';
-import SearchForm from "../../components/SearchForm/SearchForm";
-import { selectFavorites } from '../../redux/selectors';
+import CarGallery from 'components/CarGallery/CarGallery';
+import SearchForm from 'components/SearchForm/SearchForm';
+import { selectFavorites } from 'redux/selectors';
 import { FavoritesWrap, NoResultsImage } from './Favorites.styled';
 
 const Favorites = () => {

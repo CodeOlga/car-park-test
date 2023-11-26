@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import CarGallery from "../../components/CarGallery/CarGallery";
-import SearchForm from "../../components/SearchForm/SearchForm";
-import { fetchCars } from "../../redux/operations";
-import { selectCars, selectIsLoading } from "../../redux/selectors";
+import CarGallery from 'components/CarGallery/CarGallery';
+import SearchForm from 'components/SearchForm/SearchForm';
+import { fetchCars } from 'redux/operations';
+import { selectCars, selectIsLoading } from 'redux/selectors';
 import { Button } from './Catalog.styled';
 
 const Catalog = () => {

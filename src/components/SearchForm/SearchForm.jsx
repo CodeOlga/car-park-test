@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Select from 'react-select';
 
-import carBrandOptions from '../../data/makes.json';
-import formatNumberWithCommas from '../../utils/formatNumberWithCommas';
+import carBrandOptions from 'data/makes.json';
+import formatNumberWithCommas from 'utils/formatNumberWithCommas';
 import { FormContainer, BrandPriceWrap, InputMileageWrap, Label, InputMileageText, CustomInputRight, CustomInputLeft, StyledButton } from './SearchForm.styled';
 import { colorStyles } from './ColorStyles';
 

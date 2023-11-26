@@ -1,5 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit";
-import storage from "redux-persist/lib/storage";
+import { configureStore } from '@reduxjs/toolkit';
+import storage from 'redux-persist/lib/storage';
 import {
 	persistStore,
 	persistReducer,
@@ -11,9 +11,9 @@ import {
     REGISTER,
 } from 'redux-persist';
 
-import { carsReducer } from "./carsSlice";
+import { carsReducer } from './carsSlice';
 // import { filtersReducer } from "./filtersSlice";
-import { favoritesReducer } from "./favoritesSlice";
+import { favoritesReducer } from './favoritesSlice';
 
 const favoritesPersistConfig = {
   key: "favorites",
