@@ -81,6 +81,18 @@ export const CustomInputRight = styled.input`
   margin-right: 0px;
 `;
 
+export const ButtonResetWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+
+  @media screen and (min-width: 880px) {
+    margin-top: 0;
+  }
+`;
+
 export const StyledButton = styled.button`
   color: var(--white-cl);
   font-size: 14px;
@@ -91,19 +103,18 @@ export const StyledButton = styled.button`
   width: 136px;
   height: 48px;
   padding: 14px 44px;
-  margin-top: 20px;
   transition: background-color 0.3s ease;
 
   &:hover,
   &:focus {
     background-color: var(--pressed-state-bg-cl);
   }
-
-  @media screen and (min-width: 880px) {
-    margin-top: 0;
-  }
 `;
 
+export const ResetIcon = styled.div`
+  width: 24px;
+  height: 24px;
+`;
 
 
 
