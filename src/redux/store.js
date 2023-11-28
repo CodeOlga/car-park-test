@@ -12,7 +12,7 @@ import {
 } from 'redux-persist';
 
 import { carsReducer } from './carsSlice';
-import { filterReducer } from "./filterSlice";
+import { filterReducer } from './filterSlice';
 import { favoritesReducer } from './favoritesSlice';
 
 const favoritesPersistConfig = {

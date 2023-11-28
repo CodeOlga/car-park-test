@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 
-import Modal from "../Modal/Modal";
+import Modal from '../Modal/Modal';
 import { selectFavorites } from 'redux/selectors';
 import { addFavorite, deleteFavorite } from 'redux/favoritesSlice';
 import { CardWrap, ImageWrap, Image, FavoriteButton, InfoWrap, InfoItem, TitleLine, Title, Span, InfoLine, Button } from './CarCard.styled';

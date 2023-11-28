@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { createPortal } from "react-dom";
+import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 import getAge from 'utils/getAge';
 import {
@@ -19,7 +19,7 @@ import {
   SpanCondition,
   Button,
   CloseIcon
-} from "./Modal.styled";
+} from './Modal.styled';
 
 const modalRoot = document.getElementById("modal-root");
 

@@ -5,7 +5,7 @@ export const selectFavorites = state => state.favorites.items;
 export const selectError = state => state.cars.error;
 export const selectIsLoading = state => state.cars.isLoading;
 
-// =========Filter===============
+// =========filter===============
 export const selectFilterBrand = (state) => state.filter.filterBrand;
 export const selectFilterPrice = (state) => state.filter.filterPrice;
 export const selectFilterMileageFrom = (state) => state.filter.filterMileage.from;

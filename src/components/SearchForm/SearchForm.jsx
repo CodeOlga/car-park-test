@@ -1,139 +1,31 @@
-// import { useState } from 'react';
-// import Select from 'react-select';
-
-// import carBrandOptions from 'data/makes.json';
-// import formatNumberWithCommas from 'utils/formatNumberWithCommas';
-// import { FormContainer, BrandPriceWrap, InputMileageWrap, Label, InputMileageText, CustomInputRight, CustomInputLeft, StyledButton } from './SearchForm.styled';
-// import { colorStyles } from './ColorStyles';
-
-// const options = carBrandOptions.map((brand) => ({
-//   value: brand,
-//   label: brand,
-// }));
-
-// const SearchForm = ({ onSearch }) => {
-//   const [selectedCarBrand, setSelectedCarBrand] = useState('');
-//   const [selectedPricePerHour, setSelectedPricePerHour] = useState('');
-//   const [mileageRange, setMileageRange] = useState({ from: '', to: '' });
-
-//   const handleMileageChange = (part, value) => {
-//     setMileageRange((prevRange) => ({ ...prevRange, [part]: value }));
-//   };
-
-//   const priceOptions = Array.from({ length: 10 }, (_, index) => (index + 1) * 10);
-
-//   const handleSearch = () => {
-//     onSearch({
-//       carBrand: selectedCarBrand,
-//       pricePerHour: selectedPricePerHour,
-//     });
-//   };
-
-//   return (
-//     <FormContainer>
-
-//       <BrandPriceWrap>
-//         <Label>
-//           Car Brand
-//           <Select
-//             defaultValue={selectedCarBrand}
-//             options={options}
-//             onChange={setSelectedCarBrand}
-//             styles={colorStyles(224)}
-//             placeholder="Enter the text" />
-//         </Label>
-
-//         <Label>
-//           Price/1 hour
-//           <Select
-//             defaultValue={selectedPricePerHour}
-//             options={priceOptions.map((price) => ({ value: price, label: `$${price}` }))}
-//             onChange={(selectedOption) => setSelectedPricePerHour(selectedOption.value)}
-//             styles={colorStyles(125)}
-//             placeholder="To $"
-//           />
-//         </Label>
-//       </BrandPriceWrap>
-
-//       <InputMileageWrap>
-//         <Label>
-//           Сar mileage / km
-//           <InputMileageText>From</InputMileageText>
-//           <CustomInputLeft
-//             required // поле обов'язкове для заповнення 
-//             type="text"
-//             value={formatNumberWithCommas(mileageRange.from)}
-//             onChange={(e) => handleMileageChange('from', e.target.value)}
-//           />
-//         </Label>
-
-//         <Label style={{ color: "white" }}>
-//           Сar mileage / km
-//           <InputMileageText>To</InputMileageText>
-//           <CustomInputRight
-//             required
-//             type="text"
-//             value={formatNumberWithCommas(mileageRange.to)}
-//             onChange={(e) => handleMileageChange('to', e.target.value)}
-//           />
-//         </Label>
-//       </InputMileageWrap>
-
-//       <StyledButton type="submit" onClick={handleSearch}>
-//         Search
-//       </StyledButton>
-
-//     </FormContainer>
-//   );
-// };
-
-// export default SearchForm;
-
-
-// =========Filter===========
 import { useState, useRef } from 'react';
 import { useDispatch } from "react-redux";
 import Select from 'react-select';
-import { fetchCars } from '../../redux/operations';
-import { resetFilter, updateFilter } from "../../redux/filterSlice";
 
 import carBrandOptions from 'data/makes.json';
-import formatNumberWithCommas from 'utils/formatNumberWithCommas';
+import { fetchCars } from 'redux/operations';
+import { resetFilter, updateFilter } from "redux/filterSlice";
+import { generateBrandOptions, generatePriceOptions } from 'utils/selectOptions';
+import { formatNumberWithCommas } from 'utils/formatNumberWithCommas';
 import { FormContainer, BrandPriceWrap, InputMileageWrap, Label, InputMileageText, CustomInputRight, CustomInputLeft, ButtonResetWrap, StyledButton, ResetIcon } from './SearchForm.styled';
 import { colorStyles } from './ColorStyles';
 
-// transformSelectData - можна винести в utils
-const optionsBrand = carBrandOptions.map((brand) => ({
-  value: brand,
-  label: brand,
-}));
-
-// формує дропдаун з цінами
-const optionsPrice = Array.from({ length: 50 }, (_, index) => ({
-  value: String((index + 1) * 10),
-  label: String((index + 1) * 10),
-}));
-
-// щоб знаходило автомобілі з ціною ДО вказаної ціни
-const generatePriceOptions = (selectedValue) => {
-  const options = [];
-  for (let i = 10; i <= selectedValue; i += 10) {
-    options.push({ value: String(i), label: String(i) });
-  }
-  return options;
-};
+const optionsBrand = generateBrandOptions(carBrandOptions);
+const optionsPrice = generatePriceOptions();
 
 const SearchForm = () => {
   const dispatch = useDispatch();
+
+  // useRef - це React Hook, який дозволяє посилатися на значення, яке не потрібно для рендерингу
   const selectBrandRef = useRef(null);
   const selectPriceRef = useRef(null);
 
-  // eslint-disable-next-line 
   const [selectedPrice, setSelectedPrice] = useState('');
   // eslint-disable-next-line 
   const [priceOptions, setPriceOptions] = useState([]);
   const [mileageRange, setMileageRange] = useState({ from: '', to: '' });
 
+  // Функція відповідає за змінення обраної цінової опції у формі
   const handlePriceChange = (selectedOption) => {
     if (selectedOption) {
       setSelectedPrice(selectedOption.value);
@@ -141,10 +33,15 @@ const SearchForm = () => {
     }
   };
 
+  // Оновлення стану mileageRange, де одна з його частин (from або to) 
+  // оновлюється новим відформатованим значенням (з комою), введеним користувачем в поле пробігу
   const handleMileageChange = (part, value) => {
     const formattedValue = formatNumberWithCommas(value);
     setMileageRange((prevRange) => ({ ...prevRange, [part]: formattedValue }));
   };
+
+  const handleMileageFromChange = (e) => handleMileageChange('from', e.target.value);
+  const handleMileageToChange = (e) => handleMileageChange('to', e.target.value);
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -152,7 +49,7 @@ const SearchForm = () => {
     const brand = form.elements.brand.value.trim();
     const price = form.elements.price.value;
 
-    // Приведення рядкових значень пробігу до числа
+    // Очищення від коми та приведення до числа рядкових значень пробігу 
     const mileageFrom = parseFloat(form.elements.mileageFrom.value.replace(/,/g, ''));
     const mileageTo = parseFloat(form.elements.mileageTo.value.replace(/,/g, ''));
 
@@ -160,6 +57,8 @@ const SearchForm = () => {
     dispatch(fetchCars());
     form.reset();
     setMileageRange({ from: '', to: '' });
+
+    // Очищуємо значення у випадаючих списках при скиданні фільтра
     selectBrandRef.current.clearValue();
     selectPriceRef.current.clearValue();
   };
@@ -175,10 +74,9 @@ const SearchForm = () => {
         <Label>
           Car Brand
           <Select
-            // defaultValue={selectedCarBrand}
-
             name="brand"
             options={optionsBrand}
+            //  встановлює ref компонента Select у змінну selectBrandRef
             ref={(ref) => (selectBrandRef.current = ref)}
             styles={colorStyles(224)}
             placeholder="Enter the text" />
@@ -187,10 +85,9 @@ const SearchForm = () => {
         <Label>
           Price/1 hour
           <Select
-            // логічного значення не має, тільки щоб не сварився лінтер
-            // defaultValue={selectedPrice}
-
             name="price"
+            // логічного значення не має, тільки щоб не сварився лінтер
+            defaultValue={selectedPrice}
             options={optionsPrice}
             onChange={handlePriceChange}
             ref={(ref) => (selectPriceRef.current = ref)}
@@ -208,7 +105,7 @@ const SearchForm = () => {
             type="text"
             name="mileageFrom"
             value={mileageRange.from}
-            onChange={(e) => handleMileageChange('from', e.target.value)}
+            onChange={handleMileageFromChange}
             autoComplete="off"
           />
         </Label>
@@ -220,7 +117,7 @@ const SearchForm = () => {
             type="text"
             name="mileageTo"
             value={mileageRange.to}
-            onChange={(e) => handleMileageChange('to', e.target.value)}
+            onChange={handleMileageToChange}
             autoComplete="off"
           />
         </Label>
