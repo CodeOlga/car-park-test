@@ -112,8 +112,17 @@ export const StyledButton = styled.button`
 `;
 
 export const ResetIcon = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+`;
+
+export const ResetSvg = styled.svg`
+  fill: var(--normal-state-bg-cl);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 
