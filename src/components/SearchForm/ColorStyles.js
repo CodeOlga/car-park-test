@@ -24,7 +24,11 @@ export const colorStyles = (width) => {
         backgroundColor: isSelected ? 'var(--normal-state-bg-cl)' : 'var(--white-cl)',
         color: isDisabled ? 'var(--white-cl)' : isSelected  ? 'var(--dark-text-cl)' : 'var(--backdrop-text-cl)',
         fontSize: isDisabled ? '16px' : '18px',
-        borderRadius: '14px'
+        borderRadius: '14px',
+        transition: 'color 0.3s ease',
+        '&:hover': {
+          color: 'var(--normal-state-bg-cl)', 
+        }
       };
     },
     singleValue: (provided) => {
